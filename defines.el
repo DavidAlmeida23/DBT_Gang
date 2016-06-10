@@ -83,13 +83,3 @@ interface inter17
 {
 	
 }
-
-component dummyBOMBASman (C)
-{
-	properties:
-		string queremFazerMelhor : "façam"
-		string naoGostamDosNomes : "mudem"
-		string queremNumUnicoFicheiro : "metam"
-		string queremEmMaisFicheiros : "criem"
-		string assinado : "bomberman"
-}
