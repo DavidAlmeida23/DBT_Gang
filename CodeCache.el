@@ -6,7 +6,7 @@ component CodeCache(C)
 	properties:
 		int CCache_Size 
 	services:
-		i_CCache_Decoder fetch
+		i_CCache fetch
 	references:
-		i_SrcArch_CCache getWordSize
+		i_ISA r_ISA
 }

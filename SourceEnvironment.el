@@ -5,11 +5,9 @@ import "DataMemory.el"
 component SourceEnv (C)
 {
 	subcomponents:
-		DataMemory mem
+		DataMemory dataMem
 	services:
-		inter2 pc		// Atualizado - Este serviço não é DMem mais sim do SourceEnv
-		inter2_1 s_pc 	// Atualizado - Este serviço não é DMem mais sim do SourceEnv
-	promote service mem.getDataMem 		as getDataMem
-	promote reference mem.getMemSize 	as getMemSize
-	promote reference mem.getXMemSize 	as getXMemSize
+		i_PCAcessors s_setPC
+
+	promote reference dataMem.r_MemSizes as pr_MemSizes
 }

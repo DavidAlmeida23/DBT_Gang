@@ -1,105 +1,56 @@
-/******************** TCACHE ***********************/
-/*-------------------------------------------------*/
-interface i_Target_TCache // 7
-{
-	getWordSize
+/************** TargetArchitecture *****************/
+interface i_TrgArch {
+	getWordSize	// 7
+	getMemSize	// Update - For verifications 
 }
 
-interface i_TCache_RunDBT // Atualização - Esta interface ainda nao existia no modelo
-{
-	addTag
+/********* Source & Target Architecture ************/
+interface i_ISA {
+	getWordSize	// 6
+	nBitsOpcode // 5
 }
-
-interface i_TCache_RunDBT2 // Atualização - Esta interface ainda nao existia no modelo
-{
-	getTransAddr
+interface i_MemSizes{
+	xDataMemSize 	// 1 - 8051 xMemSize 
+	DataMemSize 	// 1 - 8051 MemSize 
+	MemSize			// Updated - Necessary for algorithms in TCache
+	HeapSize		// Updated - Necessary for algorithms in TCache	
+	StackSize		// Updated - Necessary for algorithms in TCache
 }
+interface i_Registers {/*NULL*/} // 8 & 9
 
-interface i_TCache_Execute // 4_0
-{
-	//getcurrBBExecPtr
-	getLastTransAddr
-}
-
-interface i_TCache_Translate // 4_1
-{
-	//setcurrBBExecPtr
-	getCurrInsAddr
-}
-
-interface i_TCache_Generator // 10
-{
-	cacheCode
-}
-/*-------------------------------------------------*/
-
-
-/******************** CCACHE ***********************/
-/*-------------------------------------------------*/
-interface i_CCache_Decoder // 13
-{
-	fetch
-}
-
-interface i_SrcArch_CCache // 6
-{
-	getWordSize
-}
-/*-------------------------------------------------*/
-
-
-/**************** DATA MEMORY **********************/
-/*-------------------------------------------------*/
-interface i_DMem_Execute // 3
-{
-	getDataMem
-}
-
-interface i_SrcArch_DMem // 1
-{
-	MemSize
-}
-
-interface i_SrcArch_DMem2 // 1
-{
-	xMemSize
-}
-/*-------------------------------------------------*/
-
-
-
-interface inter2
-{
+/************** SourceEnvironment *****************/
+interface i_PCAcessors { // 2
 	getPC
 	setPC
 }
 
-interface inter5
-{
-	nbitsopcode
+/******************** TCACHE ***********************/
+interface i_TCache {
+	addTag 				// updated
+	getTransAddr		// updated
+	getLastTransAddr 	// 4_0
+	getCurrInsAddr		// 4_1
+	cacheCode			// 10
 }
 
-interface inter2_1
-{
-	getPC
+/******************** CCACHE ***********************/
+interface i_CCache {
+	fetch	// 13
 }
 
-interface inter8
-{
-	src_Registers
+/****************** DATA MEMORY *******************/
+interface i_DMem {
+	readDataMem	 	// 3
+	writeDataMem	// Updated - Enable Write Function in the Data Memory
 }
 
-interface inter9
-{
-	targetRegisters
+/********************* DECODE *********************/
+interface i_Decode {
+	decode // 11
 }
 
-interface inter11
-{
-	decode
-}
-interface inter12
-{
+/******************* GENERATOR ********************/
+interface i_Generate { // 12
 	gen_helper  gen_helper_int  gen_helper_pcArg  gen_helper_r4
   	gen_brkp  gen_blx
 	gen_PUSH  gen_POP
@@ -119,26 +70,23 @@ interface inter12
 	gen_and  gen_andi
 	gen_xor
 	gen_shri  gen_shli
-	gen_orShl	
-}
-interface inter13
-{
-	fetch
+	gen_orShl
 }
 
-interface inter14
-{
-	translate
+/********************* RunDBT *********************/
+interface i_RunDBT{
+	run // 16
 }
-interface inter15
-{
-	execute
+
+/******************* TRANSLATOR *******************/
+interface i_Translate{
+	translate // 14
 }
-interface inter16
-{
-	runDBT
+
+/******************** EXECUTOR *******************/
+interface i_Execute{
+	execute	// 15
 }
-interface inter17
-{
-	
-}
+
+/****************** OPTIMIZATION *****************/
+interface i_Optimization{/*NULL*/} // 15
