@@ -4,14 +4,11 @@ import "Interfaces.el"
 component Decoder (C)
 {
 	services:
-		i_Decode s_decode
+		i_Decode s_Decode
 	references:
 		i_ISA r_ISA
 		i_Registers r_Registers
-//	references:
-//		inter2 pc
-//		inter5 op
-//		inter8 reg
-//		i_SrcArch getWordSize
-//		i_CCache fetch
+		i_PCAccessors r_PCAccessors
+		i_Generate r_Generate
+		i_CCache r_CCache
 }

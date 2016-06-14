@@ -5,14 +5,13 @@ import "Optimizations.el"
 component Translate (C)
 {
 	subcomponents:
-		Optimization optimize
+		Optimization optimization
 	services:
-		i_Translate translate
-//	references:
-//		i_CCache fetch
-//		inter11 decode
-//		inter12 gen
-//		inter17 optm
-//	bind optm to optimize.optm
-//	promote reference optimize.set_ptr as set_ptr
+		i_Translate s_Translate
+	references:
+		i_Decode r_Decode
+		i_Optimization r_Optimization
+		i_TCache r_TCache
+		
+	bind r_Optimization to optimization.s_Optimization
 }

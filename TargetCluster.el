@@ -6,8 +6,16 @@ import "Architectures.el"
 component TargetCluster (C)
 {
 	subcomponents:
-		TargetArch target
-		Generator gen
-
-	promote reference gen.r_Registers as pr_Registers
+		Architecture target
+		Generator gen 
+		
+	bind gen.r_ISA to target.s_ISA
+	bind gen.r_TrgRegisters to target.s_Registers
+	
+	promote reference gen.r_SrcRegisters as pr_SrcRegisters
+	promote reference gen.r_PCAccessors  as pr_PCAccessors
+	promote reference gen.r_TCache 		 as pr_TCache
+	
+	promote service target.s_ISA as ps_ISA
+	promote service gen.s_Generate as ps_Generate
 }

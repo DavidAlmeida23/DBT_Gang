@@ -7,7 +7,8 @@ component SourceEnv (C)
 	subcomponents:
 		DataMemory dataMem
 	services:
-		i_PCAcessors s_setPC
+		i_PCAccessors s_PCAccessors
 
 	promote reference dataMem.r_MemSizes as pr_MemSizes
+	promote service dataMem.s_DMem as ps_DMem
 }

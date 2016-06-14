@@ -4,7 +4,12 @@ import "Interfaces.el"
 component Generator (C)
 {
 	services:
-		i_Generate s_gen	
+		i_Generate s_Generate	
 	references:
-		i_Registers r_Registers
+		i_Registers r_SrcRegisters
+		i_Registers r_TrgRegisters
+		i_PCAccessors r_PCAccessors
+		i_ISA r_ISA
+		i_TCache r_TCache
+
 }

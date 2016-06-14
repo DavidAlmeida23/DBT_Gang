@@ -8,26 +8,20 @@ component SourceCluster (C)
 {
 	subcomponents:
 		Decoder decoder
-		SourceArch srcArch
+		Architecture srcArch
 		SourceEnv srcEnv	
-	
+	 
 	bind decoder.r_ISA 			to srcArch.s_ISA
 	bind srcEnv.pr_MemSizes 	to srcArch.s_MemSizes
 	bind decoder.r_Registers 	to srcArch.s_Registers
+	bind decoder.r_PCAccessors	to srcEnv.s_PCAccessors
 	
-	promote service srcArch.s_ISA 		as ps_ISA
-	promote service srcArch.s_Registers as ps_Registers 
+	promote service srcArch.s_ISA 		 as ps_ISA
+	promote service srcArch.s_Registers  as ps_Registers 
+	promote service srcEnv.s_PCAccessors as ps_PCAccessors
+	promote service srcEnv.ps_DMem		 as pps_DMem
+	promote service decoder.s_Decode	 as ps_Decode
 	
-//	bind srcEnv.getXMemSize to srcArch.i_srcArch
-//	bind decode.pc 			to srcEnv.pc
-//	bind decode.op 			to srcArch.op
-//	bind decode.reg 		to srcArch.reg
-//	bind decode.getWordSize to srcArch.i_srcArch
-//	
-//	promote service srcArch.reg 		as reg
-//	promote service srcArch.setWordSize as setWordSize
-//	promote service srcEnv.getDataMem 	as getDataMem  // Atualizado - Não é necessário fazer promote (Ver SourceEnv)
-//	promote service srcEnv.s_pc 		as pc
-//	promote service decode.decode 		as decode
-//	promote reference decode.fetch 		as fetch
+	promote reference decoder.r_Generate as pr_Generate
+	promote reference decoder.r_CCache   as pr_CCache
 }

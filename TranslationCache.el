@@ -7,8 +7,8 @@ component TranslationCache(C)
 		int TCache_Size
 		int numberOfTradutions
 	services:
-		i_TCache i_tcache
+		i_TCache s_TCache
 	references:
-		i_TrgArch getWordSize
+		i_ISA r_ISA
 }
 

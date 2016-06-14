@@ -19,7 +19,7 @@ interface i_MemSizes{
 interface i_Registers {/*NULL*/} // 8 & 9
 
 /************** SourceEnvironment *****************/
-interface i_PCAcessors { // 2
+interface i_PCAccessors { // 2
 	getPC
 	setPC
 }

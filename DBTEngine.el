@@ -9,24 +9,15 @@ component DBTEngine (C)
 		Translate translate
 		Execute execute
 	services:
-		i_RunDBT run
-//	references:
-//		i_TCache i_tCache	// addTag && getTransAddr 
-//		inter14 trans
-//		inter15 exec
-//		
-//	// Subcomponent Translate providing a service to the Engine Component
-//	bind trans to translate.translate
-//	
-//	// Subcomponent Execute providing a service to the Engine Component
-//	bind exec to execute.exec
-//	
-//	// Promoting References from the Translate Component
-//	promote reference translate.set_ptr as set_ptr
-//	promote reference translate.fetch 	as fetch
-//	promote reference translate.decode 	as decode
-//	promote reference translate.gen 	as generate
-//	
-//	// Promoting References from the Execute Component
-//	promote reference execute.data_mem 	as mem
-}
+		i_RunDBT s_RunDBT
+	references:
+		i_Translate r_Translate
+		i_Execute r_Execute
+	
+	bind r_Translate to translate.s_Translate
+	bind r_Execute to execute.s_Execute
+	promote reference execute.r_DMem as pr_DMem
+	promote reference translate.r_Decode as pr_Decode
+	promote reference translate.r_TCache as pr_TransTCache
+	promote reference execute.r_TCache as pr_ExeTCache
+} 
