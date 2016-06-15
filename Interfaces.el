@@ -87,6 +87,3 @@ interface i_Translate{
 interface i_Execute{
 	execute	// 15
 }
-
-/****************** OPTIMIZATION *****************/
-interface i_Optimization{/*NULL*/} // 15

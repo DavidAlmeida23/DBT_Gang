@@ -27,7 +27,7 @@ import "TranslationCache.el"
 import "DataMemory.el"
 /*-----------------------*/
 
-//compile DBT
+compile DBT
 component DBT (C)
 {
 	subcomponents:
