@@ -3,6 +3,8 @@ import "Interfaces.el"
 
 component Architecture (C)
 {
+	properties:
+		string name
 	services:
 		i_ISA s_ISA
 		i_MemSizes s_MemSizes
