@@ -34,6 +34,12 @@ public class ELGenerator
 		
 		//================== DEPENDENCIES GRAPH ==================
 		//Non-dependent properties
+		obj = proc.getProperty("DBT.srcCluster.srcArch","name");
+		if(obj==null) __DBT._srcCluster._srcArch.set_name(); //Set default or throw error
+		else __DBT._srcCluster._srcArch.set_name((String) obj);
+		obj = proc.getProperty("DBT.trgCluster.target","name");
+		if(obj==null) __DBT._trgCluster._target.set_name(); //Set default or throw error
+		else __DBT._trgCluster._target.set_name((String) obj);
 		obj = proc.getProperty("DBT.trgCluster.gen","optmizations");
 		if(obj==null) __DBT._trgCluster._gen.set_optmizations(); //Set default or throw error
 		else __DBT._trgCluster._gen.set_optmizations((boolean) obj);

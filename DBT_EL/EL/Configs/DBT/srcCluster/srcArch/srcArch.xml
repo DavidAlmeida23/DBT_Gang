@@ -2,5 +2,11 @@
 
 <component type="Architecture">
 	<elaboration default="SpecificArchitectureElaboratorTemplate">SpecificArchitectureElaboratorTemplate</elaboration>
-	<properties></properties>
+	<properties>
+		<property type="string" name="name" default="">
+			<value>
+				<element></element>
+			</value>
+		</property>
+	</properties>
 </component>

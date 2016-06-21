@@ -1,0 +1,15 @@
+/Architectures.el
+/CodeCache.el
+/DBT.el
+/DBTEngine.el
+/DataMemory.el
+/Decoder.el
+/Execute.el
+/Generator.el
+/Interfaces.el
+/Languages.el
+/SourceCluster.el
+/SourceEnvironment.el
+/TargetCluster.el
+/Translate.el
+/TranslationCache.el
