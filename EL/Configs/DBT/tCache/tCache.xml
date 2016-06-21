@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="TranslationCache">
+	<elaboration default="SpecificTranslationCacheElaboratorTemplate">SpecificTranslationCacheElaboratorTemplate</elaboration>
+	<properties>
+		<property type="int" name="TCache_Size" default="">
+			<value>
+				<element></element>
+			</value>
+		</property>
+		<property type="int" name="numberOfTradutions" default="">
+			<value>
+				<element></element>
+			</value>
+		</property>
+	</properties>
+</component>

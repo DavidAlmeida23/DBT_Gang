@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="SourceEnv">
+	<elaboration default="SpecificSourceEnvElaboratorTemplate">SpecificSourceEnvElaboratorTemplate</elaboration>
+	<properties></properties>
+</component>

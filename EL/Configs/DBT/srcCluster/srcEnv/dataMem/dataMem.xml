@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="DataMemory">
+	<elaboration default="SpecificDataMemoryElaboratorTemplate">SpecificDataMemoryElaboratorTemplate</elaboration>
+	<properties></properties>
+</component>

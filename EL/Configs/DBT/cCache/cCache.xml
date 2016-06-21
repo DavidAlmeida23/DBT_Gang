@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="CodeCache">
+	<elaboration default="SpecificCodeCacheElaboratorTemplate">SpecificCodeCacheElaboratorTemplate</elaboration>
+	<properties>
+		<property type="int" name="CCache_Size" default="">
+			<value>
+				<element></element>
+			</value>
+		</property>
+	</properties>
+</component>

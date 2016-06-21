@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="DBT">
+	<elaboration default="SpecificDBTElaboratorTemplate">SpecificDBTElaboratorTemplate</elaboration>
+	<properties></properties>
+</component>
