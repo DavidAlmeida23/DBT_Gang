@@ -51,7 +51,7 @@ interface i_Decode {
 
 /******************* GENERATOR ********************/
 interface i_Generate { // 12
-	gen_helper  gen_helper_int  gen_helper_pcArg  gen_helper_r4
+	gen_helper
   	gen_brkp  gen_blx
 	gen_PUSH  gen_POP
 	gen_cmp  gen_cmpi
@@ -84,6 +84,13 @@ interface i_Translate{
 }
 
 /******************** EXECUTOR *******************/
-interface i_Execute{
-	execute	// 15
+interface i_CurrBBExec{
+	CurrBBExecPtr	// 15
 }
+
+/******************** InitDBT *******************/
+interface i_Init{
+	initTranslator
+	runDBT
+}
+

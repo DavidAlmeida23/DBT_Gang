@@ -3,6 +3,8 @@ import "Interfaces.el"
 
 component Generator (C)
 {
+	properties:
+		bool optmizations : false
 	services:
 		i_Generate s_Generate	
 	references:

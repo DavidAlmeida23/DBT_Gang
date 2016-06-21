@@ -38,6 +38,7 @@ component DBT (C)
 		DBTEngine dbtEngine
 	references:
 		i_RunDBT r_RunDBT
+		i_Init r_Init
 		
 	bind cCache.r_ISA to srcCluster.ps_ISA
 	bind trgCluster.pr_SrcRegisters to srcCluster.ps_Registers
@@ -50,7 +51,8 @@ component DBT (C)
 	bind srcCluster.pr_CCache to cCache.s_CCache
 	bind r_RunDBT to dbtEngine.s_RunDBT
 	bind dbtEngine.pr_TransTCache to tCache.s_TCache
-	bind dbtEngine.pr_ExeTCache to tCache.s_TCache
+	bind r_Init to dbtEngine.s_Init
+
 }
 
 

@@ -3,10 +3,7 @@ import "Interfaces.el"
 
 component Execute (C)
 {
-	services:
-		i_Execute s_Execute
 	references:
+		i_CurrBBExec r_CurrBBExec
 		i_DMem r_DMem
-		i_TCache r_TCache
-		
 }
