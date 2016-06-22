@@ -1,0 +1,164 @@
+#include "DBTEngine.h"
+
+
+CDBTEngine::CDBTEngine(int Tcache_size, int Ccache_size)
+  :target(Tcache_size), source(Ccache_size, &target)
+  {
+    target.setEnv(source.getEnv());
+    target.setxMem(source.getxMem());
+  }
+
+
+int CDBTEngine::initTranslator(void * sourCodeAddr , int sourCodeSize ,int exit_address)
+{
+
+	source.pSourceProgMem = (SOURCE_MEM_BASE *)sourCodeAddr;
+	source.sourceProgSize = sourCodeSize;
+
+	//zprintf("Source program at 0x%x address, with size of %d bytes\n",pSourceProgMem, sourceProgSize);
+
+	source.exit_addr = exit_address;
+	//zprintf("Exit address at 0x%x\n", exit_addr);
+
+	if( source.pSourceProgMem == NULL ) return 1;	 //report errors during code memory allocation
+
+							//error during code loading
+
+
+
+	//current version does not generate code by copying from the trans table, so no trans table will be initialized
+	//if ( transTable.initTrans(NULL) ) return 1;	//inits the translation table and returns if a problem occurs when loading the translations
+
+	zprintf("Entering envReset()\n");
+	source.envReset();
+	zprintf("Entering condCodedHandlerInit()\n");
+	source.condCodedHandlerInit();
+
+	source.currBBExecPtr = NULL;
+
+// the sourceCodeLoader() call isn't nedded in this version
+// because the code is already loaded into memory
+//  	if ( sourceCodeLoader() )		//verify source code is loaded
+//		return 1;
+
+	zprintf("codeCache.load()\n");
+	source.codeCache.load(source.pSourceProgMem,source.sourceProgSize,0);
+
+	return 0;
+}
+
+
+
+int CDBTEngine::runDBT(void)	//method which is responsible for dispatching the jumps to translated code, or order new translations
+{
+
+  //translation_cycles = 0;
+
+
+  	do
+	{
+	  	//zprintf("\n...trans 0x%x\n", env.PC);
+
+		source.currBBExecPtr = target.transCache.getTransAddr(source.env.PC);
+
+	  	if ( source.currBBExecPtr  == NULL )
+		//if NULL code isn't in cache, must be translated first
+		{
+
+		  	//condition to detect the end of the program
+		  	//exit address must be extracted form the original source program
+		  	//printf("\nExit Address: 0x%x\n", exit_addr);
+			if ((int)source.env.PC == source.exit_addr)
+			{
+			  	printf("\nExit Address Reached: 0x%x\n", source.exit_addr);
+				target.eoExec = true;
+				continue;
+			}
+
+			#ifdef CHECK_MEM_ACCESS
+		  	if ( (int)env.PC >= sourceProgSize ) {
+		  		printf("PROGRAM EXECUTION @ 0x%x SURPASSES CODE MEMORY SIZE OF 0x%x\n", (int)env.PC, sourceProgSize);
+				eoExec = true;
+				continue;			// code out of memory space
+			}
+			#endif
+
+
+			//currBBExecPtr = transCache.getCurrInsAddr();	//set execution pointer to the "head" of the cache
+
+			if ( target.transCache.addTag(source.env.PC) )			//add a new tag, for a new cache entry
+			{
+			 // 	printf("########  transCache.addTag(env.PC) #########\n");
+
+				printf("error caching translation\n");
+				target.eoExec = true;	//error, while caching new traslation
+				continue;
+			}
+
+			source.currBBExecPtr = translate();
+
+			//heap stats collection, if enabled
+			SHOW_HEAP_STATS();
+		}
+
+
+		zprintf("exec...\n currBB: %x \n",currBBExecPtr );
+		//SWITCH TO EXECUTION
+
+		((void (*)(int*))((int*)(source.currBBExecPtr+1)))( (int *)(source.env.dataMem) );
+
+		//translation_cycles++;
+
+
+
+	} while( !target.eoExec );
+
+
+	return 0;
+}
+
+
+uint8_t * CDBTEngine::translate(void)
+{
+	uint8_t op;
+
+	source.eoBB = false; //end of BB translation
+
+	target.gen_prolog();
+
+	while( source.eoBB == false )
+	{
+	  	//zprintf("  # 0x%x <=> 0x%x\n", env.PC, transCache.getCurrInsAddr());
+
+//		op = FETCH;
+		op = *(source.codeCache.baseBufferAddr + (source.env.PC++))	;
+
+		source.decode((unsigned int)op);
+
+		//sInstCount++;
+//		if ( eoExec == true )	//decodes and generates the code
+//		{
+//		  zprintf("FATAL PROBLEM DURING DECODE @0x%x\n", env.PC );
+//			return;
+//		}
+	}
+	//eoBB = false;	//end of BB translation
+
+	target.gen_epilog();
+
+	return target.transCache.getLastTransAddr();
+
+}
+
+extern  CDBTEngine *globalTeste;
+
+
+//void call_helper_CC_lazyEv()
+//{ return (globalTeste)->helper_CC_lazyEv(); }
+
+void call_helper_CC_lazyEv_SNIFFER_BACKDOOR()
+{ return (globalTeste)->target_wrapper_call_helper_CC_lazyEv_SNIFFER_BACKDOOR();}
+
+
+void call_helper_debug(/*CCortexM3* transPtr,*/ int soft_brkp_addr)
+{return (globalTeste)->target_wrapper_call_helper_debug(/*CCortexM3* transPtr,*/ soft_brkp_addr);}

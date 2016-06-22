@@ -1,0 +1,1858 @@
+13:25:58 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:26:04 INFO  : XSDB server has started successfully.
+13:26:06 INFO  : Processing command line option -hwspec C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf.
+13:32:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+13:32:33 INFO  : 'fpga -state' command is executed.
+13:32:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:32:39 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:32:39 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+13:32:40 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+13:32:40 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+13:32:40 INFO  : 'stop' command is executed.
+13:32:41 INFO  : 'ps7_init' command is executed.
+13:32:41 INFO  : 'ps7_post_config' command is executed.
+13:32:41 INFO  : 'con' command is executed.
+13:32:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:32:42 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:32:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:32:42 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:32:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+13:32:42 INFO  : Memory regions updated for context APU
+13:32:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:32:42 INFO  : 'con' command is executed.
+13:32:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+13:33:41 INFO  : Disconnected from the channel tcfchan#1.
+13:33:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+13:33:41 INFO  : 'fpga -state' command is executed.
+13:33:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:48 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:33:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+13:33:49 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+13:33:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+13:33:49 INFO  : 'stop' command is executed.
+13:33:50 INFO  : 'ps7_init' command is executed.
+13:33:50 INFO  : 'ps7_post_config' command is executed.
+13:33:50 INFO  : 'con' command is executed.
+13:33:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:33:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:51 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:33:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+13:33:51 INFO  : Memory regions updated for context APU
+13:33:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:51 INFO  : 'con' command is executed.
+13:33:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+13:36:27 INFO  : Disconnected from the channel tcfchan#2.
+13:36:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+13:36:28 INFO  : 'fpga -state' command is executed.
+13:36:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:36:30 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:36:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+13:36:30 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+13:36:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+13:36:31 INFO  : 'stop' command is executed.
+13:39:35 INFO  : 'ps7_init' command is executed.
+13:39:36 INFO  : 'ps7_post_config' command is executed.
+13:39:36 INFO  : 'con' command is executed.
+13:39:36 ERROR : no targets found with "name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"". available targets:
+  1* APU
+     2  ARM Cortex-A9 MPCore #0 (Access denied) (Cannot halt processor core, timeout)
+     3  ARM Cortex-A9 MPCore #1 (Access denied) (Running)
+  4  xc7z010
+13:39:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+----------------End of Script----------------
+
+13:39:49 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+13:40:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+13:40:04 INFO  : 'fpga -state' command is executed.
+13:40:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:40:06 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:40:06 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+13:40:07 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+13:40:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+13:40:07 INFO  : 'stop' command is executed.
+13:40:07 INFO  : 'ps7_init' command is executed.
+13:40:07 INFO  : 'ps7_post_config' command is executed.
+13:40:08 INFO  : 'con' command is executed.
+13:40:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:40:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:40:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:40:09 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:40:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+13:40:09 INFO  : Memory regions updated for context APU
+13:40:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:40:09 INFO  : 'con' command is executed.
+13:40:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+14:19:48 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+14:37:30 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+15:04:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:04:17 INFO  : 'fpga -state' command is executed.
+15:04:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:04:22 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:04:22 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:04:23 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:04:23 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:04:23 INFO  : 'stop' command is executed.
+15:04:24 INFO  : 'ps7_init' command is executed.
+15:04:24 INFO  : 'ps7_post_config' command is executed.
+15:04:24 INFO  : 'con' command is executed.
+15:04:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:04:24 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:04:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:04:25 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:04:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:04:25 INFO  : Memory regions updated for context APU
+15:04:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:04:26 INFO  : 'con' command is executed.
+15:04:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:13:00 INFO  : Disconnected from the channel tcfchan#3.
+15:13:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:13:01 INFO  : 'fpga -state' command is executed.
+15:13:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:13:05 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:13:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:13:05 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:13:06 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:13:06 INFO  : 'stop' command is executed.
+15:13:06 INFO  : 'ps7_init' command is executed.
+15:13:06 INFO  : 'ps7_post_config' command is executed.
+15:13:07 INFO  : 'con' command is executed.
+15:13:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:13:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:08 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:13:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:13:08 INFO  : Memory regions updated for context APU
+15:13:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:08 INFO  : 'con' command is executed.
+15:13:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:16:01 INFO  : Disconnected from the channel tcfchan#4.
+15:16:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:16:01 INFO  : 'fpga -state' command is executed.
+15:16:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:16:15 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:16:15 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:16:15 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:16:15 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:16:15 INFO  : 'stop' command is executed.
+15:16:16 INFO  : 'ps7_init' command is executed.
+15:16:16 INFO  : 'ps7_post_config' command is executed.
+15:16:16 INFO  : 'con' command is executed.
+15:16:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:17 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:16:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:18 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:16:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:16:18 INFO  : Memory regions updated for context APU
+15:16:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:18 INFO  : 'con' command is executed.
+15:16:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:18:50 INFO  : Disconnected from the channel tcfchan#5.
+15:18:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:18:51 INFO  : 'fpga -state' command is executed.
+15:18:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:18:53 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:18:53 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:18:53 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:18:54 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:18:54 INFO  : 'stop' command is executed.
+15:18:54 INFO  : 'ps7_init' command is executed.
+15:18:55 INFO  : 'ps7_post_config' command is executed.
+15:18:55 INFO  : 'con' command is executed.
+15:18:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:18:55 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:18:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:18:56 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:18:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:18:56 INFO  : Memory regions updated for context APU
+15:18:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:18:56 INFO  : 'con' command is executed.
+15:18:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:22:06 INFO  : Disconnected from the channel tcfchan#6.
+15:22:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:22:06 INFO  : 'fpga -state' command is executed.
+15:22:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:22:09 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:22:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:22:09 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:22:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:22:10 INFO  : 'stop' command is executed.
+15:22:10 INFO  : 'ps7_init' command is executed.
+15:22:10 INFO  : 'ps7_post_config' command is executed.
+15:22:10 INFO  : 'con' command is executed.
+15:22:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:11 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:22:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:12 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:22:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:22:12 INFO  : Memory regions updated for context APU
+15:22:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:12 INFO  : 'con' command is executed.
+15:22:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:22:36 INFO  : Disconnected from the channel tcfchan#7.
+15:22:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:22:37 INFO  : 'fpga -state' command is executed.
+15:22:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:22:38 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:22:38 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:22:38 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:22:39 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:22:39 INFO  : 'stop' command is executed.
+15:22:39 INFO  : 'ps7_init' command is executed.
+15:22:39 INFO  : 'ps7_post_config' command is executed.
+15:22:39 INFO  : 'con' command is executed.
+15:22:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:40 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:22:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:41 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:22:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:22:41 INFO  : Memory regions updated for context APU
+15:22:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:41 INFO  : 'con' command is executed.
+15:22:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:24:28 INFO  : Disconnected from the channel tcfchan#8.
+15:24:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:24:29 INFO  : 'fpga -state' command is executed.
+15:24:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:24:30 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:24:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:24:31 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:24:31 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:24:31 INFO  : 'stop' command is executed.
+15:24:32 ERROR : Debug context is claimed by another client
+15:24:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+----------------End of Script----------------
+
+15:25:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:25:09 INFO  : 'fpga -state' command is executed.
+15:25:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:10 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:25:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:25:11 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:25:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:25:11 INFO  : 'stop' command is executed.
+15:25:12 ERROR : Debug context is claimed by another client
+15:25:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+----------------End of Script----------------
+
+15:25:51 INFO  : FPGA Cable Disconnected. All active launches will be terminated.
+15:26:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:26:24 INFO  : 'fpga -state' command is executed.
+15:26:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:26 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:26:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:26:26 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:26:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:26:27 INFO  : 'stop' command is executed.
+15:26:27 INFO  : 'ps7_init' command is executed.
+15:26:27 INFO  : 'ps7_post_config' command is executed.
+15:26:27 INFO  : 'con' command is executed.
+15:26:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:28 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:26:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:29 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:26:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:26:29 INFO  : Memory regions updated for context APU
+15:26:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:29 INFO  : 'con' command is executed.
+15:26:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:32:13 INFO  : Disconnected from the channel tcfchan#9.
+15:32:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:32:14 INFO  : 'fpga -state' command is executed.
+15:32:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:32:15 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:32:16 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:32:16 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:32:16 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:32:16 INFO  : 'stop' command is executed.
+15:32:17 INFO  : 'ps7_init' command is executed.
+15:32:17 INFO  : 'ps7_post_config' command is executed.
+15:32:17 INFO  : 'con' command is executed.
+15:32:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:32:17 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:32:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:32:18 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:32:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:32:18 INFO  : Memory regions updated for context APU
+15:32:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:32:18 INFO  : 'con' command is executed.
+15:32:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:37:24 INFO  : Disconnected from the channel tcfchan#10.
+15:37:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:37:24 INFO  : 'fpga -state' command is executed.
+15:37:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:37:26 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:37:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:37:26 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:37:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:37:26 INFO  : 'stop' command is executed.
+15:37:27 INFO  : 'ps7_init' command is executed.
+15:37:27 INFO  : 'ps7_post_config' command is executed.
+15:37:27 INFO  : 'con' command is executed.
+15:37:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:37:28 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:37:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:37:29 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:37:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:37:29 INFO  : Memory regions updated for context APU
+15:37:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:37:29 INFO  : 'con' command is executed.
+15:37:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:40:23 INFO  : Disconnected from the channel tcfchan#11.
+15:40:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:40:24 INFO  : 'fpga -state' command is executed.
+15:40:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:40:25 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:40:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:40:26 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:40:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:40:26 INFO  : 'stop' command is executed.
+15:40:27 INFO  : 'ps7_init' command is executed.
+15:40:27 INFO  : 'ps7_post_config' command is executed.
+15:40:27 INFO  : 'con' command is executed.
+15:40:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:40:28 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:40:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:40:29 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:40:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:40:29 INFO  : Memory regions updated for context APU
+15:40:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:40:30 INFO  : 'con' command is executed.
+15:40:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:44:34 WARN  : channel "tcfchan#3" closed
+15:45:05 INFO  : Disconnected from the channel tcfchan#12.
+15:45:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:45:06 INFO  : 'fpga -state' command is executed.
+15:45:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:45:08 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:45:08 ERROR : no targets found with "name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"". available targets:
+  1  APU (JTAG port open error. AP transaction error, DAP status f0000021)
+     2  ARM Cortex-A9 MPCore #0 (DEVICEEN is '0')
+     3  ARM Cortex-A9 MPCore #1 (DEVICEEN is '0')
+  4* xc7z010
+15:45:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+----------------End of Script----------------
+
+15:45:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:45:30 INFO  : 'fpga -state' command is executed.
+15:45:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:45:31 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:45:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:45:32 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:45:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:45:32 INFO  : 'stop' command is executed.
+15:45:33 INFO  : 'ps7_init' command is executed.
+15:45:33 INFO  : 'ps7_post_config' command is executed.
+15:45:33 INFO  : 'con' command is executed.
+15:45:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:45:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:45:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:45:35 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:45:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:45:35 INFO  : Memory regions updated for context APU
+15:45:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:45:35 INFO  : 'con' command is executed.
+15:45:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:55:58 INFO  : Disconnected from the channel tcfchan#13.
+15:55:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:55:59 INFO  : 'fpga -state' command is executed.
+15:56:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:56:00 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:56:00 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:56:00 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:56:01 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:56:01 INFO  : 'stop' command is executed.
+15:56:01 INFO  : 'ps7_init' command is executed.
+15:56:02 INFO  : 'ps7_post_config' command is executed.
+15:56:02 INFO  : 'con' command is executed.
+15:56:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:56:02 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:56:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:56:03 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:56:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:56:03 INFO  : Memory regions updated for context APU
+15:56:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:56:03 INFO  : 'con' command is executed.
+15:56:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+15:59:44 INFO  : Disconnected from the channel tcfchan#14.
+15:59:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+15:59:45 INFO  : 'fpga -state' command is executed.
+15:59:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:59:46 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:59:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:59:47 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+15:59:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+15:59:47 INFO  : 'stop' command is executed.
+15:59:48 INFO  : 'ps7_init' command is executed.
+15:59:48 INFO  : 'ps7_post_config' command is executed.
+15:59:48 INFO  : 'con' command is executed.
+15:59:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:59:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:49 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:59:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+15:59:49 INFO  : Memory regions updated for context APU
+15:59:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:59:50 INFO  : 'con' command is executed.
+15:59:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+16:00:27 INFO  : Disconnected from the channel tcfchan#15.
+16:00:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+16:00:28 INFO  : 'fpga -state' command is executed.
+16:00:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:00:29 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:00:29 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+16:00:29 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+16:00:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+16:00:30 INFO  : 'stop' command is executed.
+16:00:30 INFO  : 'ps7_init' command is executed.
+16:00:31 INFO  : 'ps7_post_config' command is executed.
+16:00:31 INFO  : 'con' command is executed.
+16:00:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:00:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:32 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:00:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+16:00:32 INFO  : Memory regions updated for context APU
+16:00:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:00:33 INFO  : 'con' command is executed.
+16:00:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+16:55:56 INFO  : Disconnected from the channel tcfchan#16.
+16:55:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+16:55:57 INFO  : 'fpga -state' command is executed.
+16:55:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:55:59 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:55:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+16:56:00 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+16:56:00 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+16:56:00 INFO  : 'stop' command is executed.
+16:56:01 INFO  : 'ps7_init' command is executed.
+16:56:01 INFO  : 'ps7_post_config' command is executed.
+16:56:01 INFO  : 'con' command is executed.
+16:56:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:56:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:56:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:56:02 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/testass/Debug/testass.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:56:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/testass/Debug/testass.elf
+----------------End of Script----------------
+
+16:56:03 INFO  : Memory regions updated for context APU
+16:56:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:56:03 INFO  : 'con' command is executed.
+16:56:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+17:06:29 INFO  : Disconnected from the channel tcfchan#17.
+17:06:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+17:06:55 INFO  : 'fpga -state' command is executed.
+17:06:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:06:57 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:06:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+17:06:57 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+17:06:58 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+17:06:58 INFO  : 'stop' command is executed.
+17:06:59 INFO  : 'ps7_init' command is executed.
+17:06:59 INFO  : 'ps7_post_config' command is executed.
+17:06:59 INFO  : 'con' command is executed.
+17:07:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:00 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:07:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:01 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/testass/Debug/testass.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:07:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/testass/Debug/testass.elf
+----------------End of Script----------------
+
+17:07:01 INFO  : Memory regions updated for context APU
+17:07:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:01 INFO  : 'con' command is executed.
+17:07:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+17:07:47 INFO  : Disconnected from the channel tcfchan#18.
+17:07:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+17:07:47 INFO  : 'fpga -state' command is executed.
+17:07:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:49 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:07:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+17:07:49 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+17:07:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+17:07:50 INFO  : 'stop' command is executed.
+17:07:50 INFO  : 'ps7_init' command is executed.
+17:07:51 INFO  : 'ps7_post_config' command is executed.
+17:07:51 INFO  : 'con' command is executed.
+17:07:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:07:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:52 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/testass/Debug/testass.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:07:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/testass/Debug/testass.elf
+----------------End of Script----------------
+
+17:07:52 INFO  : Memory regions updated for context APU
+17:07:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:07:52 INFO  : 'con' command is executed.
+17:07:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+17:16:53 INFO  : Disconnected from the channel tcfchan#19.
+17:16:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+17:16:53 INFO  : 'fpga -state' command is executed.
+17:16:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:16:55 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:16:55 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+17:16:55 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+17:16:55 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+17:16:55 INFO  : 'stop' command is executed.
+17:16:56 INFO  : 'ps7_init' command is executed.
+17:16:56 INFO  : 'ps7_post_config' command is executed.
+17:16:56 INFO  : 'con' command is executed.
+17:16:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:16:57 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:16:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:16:57 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/testass/Debug/testass.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:16:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/testass/Debug/testass.elf
+----------------End of Script----------------
+
+17:16:57 INFO  : Memory regions updated for context APU
+17:16:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:16:57 INFO  : 'con' command is executed.
+17:16:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+18:07:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+18:07:00 INFO  : 'fpga -state' command is executed.
+18:07:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:07:01 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:07:02 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:07:02 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+18:07:02 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:07:02 INFO  : 'stop' command is executed.
+18:07:03 INFO  : 'ps7_init' command is executed.
+18:07:03 INFO  : 'ps7_post_config' command is executed.
+18:07:03 INFO  : 'con' command is executed.
+18:07:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:07:03 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:07:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:07:04 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:07:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf
+----------------End of Script----------------
+
+18:07:04 INFO  : Memory regions updated for context APU
+18:07:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:07:05 INFO  : 'con' command is executed.
+18:07:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+18:07:55 INFO  : Disconnected from the channel tcfchan#20.
+18:07:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+18:07:55 INFO  : 'fpga -state' command is executed.
+18:07:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:07:57 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:07:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:07:57 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+18:07:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:07:58 INFO  : 'stop' command is executed.
+18:07:58 INFO  : 'ps7_init' command is executed.
+18:07:58 INFO  : 'ps7_post_config' command is executed.
+18:07:58 INFO  : 'con' command is executed.
+18:07:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:07:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:07:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:07:59 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:07:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf
+----------------End of Script----------------
+
+18:07:59 INFO  : Memory regions updated for context APU
+18:07:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:07:59 INFO  : 'con' command is executed.
+18:07:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+18:09:43 INFO  : Disconnected from the channel tcfchan#21.
+18:09:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+18:09:43 INFO  : 'fpga -state' command is executed.
+18:09:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:09:45 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:09:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:09:45 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+18:09:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:09:46 INFO  : 'stop' command is executed.
+18:09:46 INFO  : 'ps7_init' command is executed.
+18:09:46 INFO  : 'ps7_post_config' command is executed.
+18:09:46 INFO  : 'con' command is executed.
+18:09:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:09:47 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:09:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:09:47 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:09:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf
+----------------End of Script----------------
+
+18:09:47 INFO  : Memory regions updated for context APU
+18:09:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:09:48 INFO  : 'con' command is executed.
+18:09:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+18:26:07 INFO  : Disconnected from the channel tcfchan#22.
+18:26:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+18:26:08 INFO  : 'fpga -state' command is executed.
+18:26:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:26:09 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:26:10 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:26:10 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+18:26:10 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:26:10 INFO  : 'stop' command is executed.
+18:26:11 INFO  : 'ps7_init' command is executed.
+18:26:11 INFO  : 'ps7_post_config' command is executed.
+18:26:11 INFO  : 'con' command is executed.
+18:26:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:26:11 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:26:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:26:12 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:26:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf
+----------------End of Script----------------
+
+18:26:12 INFO  : Memory regions updated for context APU
+18:26:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:26:12 INFO  : 'con' command is executed.
+18:26:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+18:28:43 INFO  : Disconnected from the channel tcfchan#23.
+18:28:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+18:28:44 INFO  : 'fpga -state' command is executed.
+18:28:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:28:46 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:28:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:28:47 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+18:28:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:28:47 INFO  : 'stop' command is executed.
+18:28:48 INFO  : 'ps7_init' command is executed.
+18:28:48 INFO  : 'ps7_post_config' command is executed.
+18:28:48 INFO  : 'con' command is executed.
+18:28:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:28:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:49 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:28:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf
+----------------End of Script----------------
+
+18:28:49 INFO  : Memory regions updated for context APU
+18:28:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:49 INFO  : 'con' command is executed.
+18:28:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+18:29:18 INFO  : Disconnected from the channel tcfchan#24.
+18:29:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+18:29:18 INFO  : 'fpga -state' command is executed.
+18:29:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:29:20 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:29:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:29:20 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+18:29:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:29:21 INFO  : 'stop' command is executed.
+18:29:21 INFO  : 'ps7_init' command is executed.
+18:29:21 INFO  : 'ps7_post_config' command is executed.
+18:29:22 INFO  : 'con' command is executed.
+18:29:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:29:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:29:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:29:22 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:29:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf
+----------------End of Script----------------
+
+18:29:23 INFO  : Memory regions updated for context APU
+18:29:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:29:23 INFO  : 'con' command is executed.
+18:29:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+18:30:21 WARN  : channel "tcfchan#20" closed
+18:44:14 INFO  : Disconnected from the channel tcfchan#25.
+18:44:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+18:44:15 INFO  : 'fpga -state' command is executed.
+18:44:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:17 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:44:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:44:18 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+18:44:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:44:18 INFO  : 'stop' command is executed.
+18:44:18 INFO  : 'ps7_init' command is executed.
+18:44:19 INFO  : 'ps7_post_config' command is executed.
+18:44:19 INFO  : 'con' command is executed.
+18:44:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:44:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:20 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:44:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+18:44:20 INFO  : Memory regions updated for context APU
+18:44:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:44:20 INFO  : 'con' command is executed.
+18:44:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+18:53:45 INFO  : Disconnected from the channel tcfchan#26.
+18:53:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+18:53:47 INFO  : 'fpga -state' command is executed.
+18:53:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:53:49 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:53:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:53:49 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+18:53:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:53:49 INFO  : 'stop' command is executed.
+18:53:50 INFO  : 'ps7_init' command is executed.
+18:53:50 INFO  : 'ps7_post_config' command is executed.
+18:53:50 INFO  : 'con' command is executed.
+18:53:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:53:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:52 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:53:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf
+----------------End of Script----------------
+
+18:53:52 INFO  : Memory regions updated for context APU
+18:53:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:52 INFO  : 'con' command is executed.
+18:53:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+18:59:02 INFO  : Disconnected from the channel tcfchan#27.
+18:59:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+18:59:03 INFO  : 'fpga -state' command is executed.
+18:59:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:59:04 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:59:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:59:05 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+18:59:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+18:59:05 INFO  : 'stop' command is executed.
+18:59:06 INFO  : 'ps7_init' command is executed.
+18:59:06 INFO  : 'ps7_post_config' command is executed.
+18:59:06 INFO  : 'con' command is executed.
+18:59:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:59:06 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:59:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:59:07 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:59:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf
+----------------End of Script----------------
+
+18:59:07 INFO  : Memory regions updated for context APU
+18:59:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:59:08 INFO  : 'con' command is executed.
+18:59:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+19:00:00 INFO  : Disconnected from the channel tcfchan#28.
+19:00:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+19:00:01 INFO  : 'fpga -state' command is executed.
+19:00:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:00:02 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:00:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:00:03 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+19:00:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:00:03 INFO  : 'stop' command is executed.
+19:00:04 INFO  : 'ps7_init' command is executed.
+19:00:04 INFO  : 'ps7_post_config' command is executed.
+19:00:04 INFO  : 'con' command is executed.
+19:00:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:00:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:00:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:00:05 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:00:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf
+----------------End of Script----------------
+
+19:00:05 INFO  : Memory regions updated for context APU
+19:00:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:00:06 INFO  : 'con' command is executed.
+19:00:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+19:07:27 INFO  : Disconnected from the channel tcfchan#29.
+19:07:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+19:07:28 INFO  : 'fpga -state' command is executed.
+19:07:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:07:30 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:07:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:07:30 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+19:07:31 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:07:31 INFO  : 'stop' command is executed.
+19:07:32 INFO  : 'ps7_init' command is executed.
+19:07:32 INFO  : 'ps7_post_config' command is executed.
+19:07:32 INFO  : 'con' command is executed.
+19:07:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:07:32 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:07:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:07:33 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:07:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf
+----------------End of Script----------------
+
+19:07:33 INFO  : Memory regions updated for context APU
+19:07:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:07:33 INFO  : 'con' command is executed.
+19:07:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+19:11:16 INFO  : Disconnected from the channel tcfchan#30.
+19:11:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+19:11:16 INFO  : 'fpga -state' command is executed.
+19:11:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:11:19 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:11:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:11:20 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+19:11:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:11:20 INFO  : 'stop' command is executed.
+19:11:21 INFO  : 'ps7_init' command is executed.
+19:11:21 INFO  : 'ps7_post_config' command is executed.
+19:11:21 INFO  : 'con' command is executed.
+19:11:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:11:21 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:11:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:11:22 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:11:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf
+----------------End of Script----------------
+
+19:11:22 INFO  : Memory regions updated for context APU
+19:11:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:11:23 INFO  : 'con' command is executed.
+19:11:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+19:13:24 INFO  : Disconnected from the channel tcfchan#31.
+19:13:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+19:13:24 INFO  : 'fpga -state' command is executed.
+19:13:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:13:27 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:13:27 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:13:27 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+19:13:28 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:13:28 INFO  : 'stop' command is executed.
+19:13:28 INFO  : 'ps7_init' command is executed.
+19:13:28 INFO  : 'ps7_post_config' command is executed.
+19:13:29 INFO  : 'con' command is executed.
+19:13:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:13:29 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:13:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:13:30 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:13:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf
+----------------End of Script----------------
+
+19:13:30 INFO  : Memory regions updated for context APU
+19:13:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:13:30 INFO  : 'con' command is executed.
+19:13:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+19:16:58 INFO  : Disconnected from the channel tcfchan#32.
+19:16:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+19:16:59 INFO  : 'fpga -state' command is executed.
+19:17:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:17:01 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+19:17:01 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:17:01 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+19:17:01 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+19:17:01 INFO  : 'stop' command is executed.
+19:17:02 INFO  : 'ps7_init' command is executed.
+19:17:02 INFO  : 'ps7_post_config' command is executed.
+19:17:02 INFO  : 'con' command is executed.
+19:17:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:17:03 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+19:17:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:17:04 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:17:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Release/DBT_SDK.elf
+----------------End of Script----------------
+
+19:17:04 INFO  : Memory regions updated for context APU
+19:17:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:17:04 INFO  : 'con' command is executed.
+19:17:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+19:52:49 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+01:05:50 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+01:05:58 INFO  : XSDB server has started successfully.
+01:06:00 INFO  : Processing command line option -hwspec C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf.
+01:06:00 INFO  : Checking for hwspec changes in the project DBT_BD_wrapper_hw_platform_0.
+01:09:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+01:09:21 INFO  : 'fpga -state' command is executed.
+01:09:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:09:24 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:09:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+01:09:25 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+01:09:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+01:09:25 INFO  : 'stop' command is executed.
+01:09:26 INFO  : 'ps7_init' command is executed.
+01:09:26 INFO  : 'ps7_post_config' command is executed.
+01:09:26 INFO  : 'con' command is executed.
+01:09:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:09:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:09:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:09:28 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:09:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+01:09:28 INFO  : Memory regions updated for context APU
+01:09:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:09:28 INFO  : 'con' command is executed.
+01:09:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+01:12:26 INFO  : Disconnected from the channel tcfchan#1.
+01:12:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+01:12:27 INFO  : 'fpga -state' command is executed.
+01:12:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:12:28 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+01:12:28 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+01:12:28 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+01:12:29 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+01:12:29 INFO  : 'stop' command is executed.
+01:12:29 INFO  : 'ps7_init' command is executed.
+01:12:30 INFO  : 'ps7_post_config' command is executed.
+01:12:30 INFO  : 'con' command is executed.
+01:12:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:12:30 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+01:12:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:12:31 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:12:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf
+----------------End of Script----------------
+
+01:12:31 INFO  : Memory regions updated for context APU
+01:12:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:12:31 INFO  : 'con' command is executed.
+01:12:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+02:04:56 INFO  : Disconnected from the channel tcfchan#2.
+02:04:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+02:04:57 INFO  : 'fpga -state' command is executed.
+02:04:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:04:59 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:04:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:04:59 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+02:04:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:05:00 INFO  : 'stop' command is executed.
+02:05:00 INFO  : 'ps7_init' command is executed.
+02:05:00 INFO  : 'ps7_post_config' command is executed.
+02:05:01 INFO  : 'con' command is executed.
+02:05:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:05:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:05:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:05:02 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:05:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/tetasss/Debug/tetasss.elf
+----------------End of Script----------------
+
+02:05:02 INFO  : Memory regions updated for context APU
+02:05:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:05:02 INFO  : 'con' command is executed.
+02:05:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+02:06:11 INFO  : Disconnected from the channel tcfchan#3.
+02:06:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+02:06:12 INFO  : 'fpga -state' command is executed.
+02:06:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:06:14 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:06:14 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:06:14 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+02:06:15 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:06:15 INFO  : 'stop' command is executed.
+02:06:15 INFO  : 'ps7_init' command is executed.
+02:06:15 INFO  : 'ps7_post_config' command is executed.
+02:06:15 INFO  : 'con' command is executed.
+02:06:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:06:16 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:06:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:06:17 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:06:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+02:06:17 INFO  : Memory regions updated for context APU
+02:06:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:06:17 INFO  : 'con' command is executed.
+02:06:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+02:08:15 INFO  : Disconnected from the channel tcfchan#4.
+02:08:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+02:08:16 INFO  : 'fpga -state' command is executed.
+02:08:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:08:17 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:08:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:08:17 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+02:08:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:08:18 INFO  : 'stop' command is executed.
+02:08:18 INFO  : 'ps7_init' command is executed.
+02:08:18 INFO  : 'ps7_post_config' command is executed.
+02:08:19 INFO  : 'con' command is executed.
+02:08:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:08:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:08:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:08:20 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:08:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+02:08:20 INFO  : Memory regions updated for context APU
+02:08:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:08:20 INFO  : 'con' command is executed.
+02:08:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+02:16:23 INFO  : Disconnected from the channel tcfchan#5.
+02:16:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+02:16:24 INFO  : 'fpga -state' command is executed.
+02:16:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:16:25 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:16:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:16:25 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+02:16:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:16:26 INFO  : 'stop' command is executed.
+02:16:26 INFO  : 'ps7_init' command is executed.
+02:16:27 INFO  : 'ps7_post_config' command is executed.
+02:16:27 INFO  : 'con' command is executed.
+02:16:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:16:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:16:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:16:28 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:16:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+02:16:28 INFO  : Memory regions updated for context APU
+02:16:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:16:28 INFO  : 'con' command is executed.
+02:16:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+02:17:06 INFO  : Disconnected from the channel tcfchan#6.
+02:17:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+02:17:06 INFO  : 'fpga -state' command is executed.
+02:17:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:17:08 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:17:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:17:08 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+02:17:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:17:09 INFO  : 'stop' command is executed.
+02:17:10 INFO  : 'ps7_init' command is executed.
+02:17:10 INFO  : 'ps7_post_config' command is executed.
+02:17:10 INFO  : 'con' command is executed.
+02:17:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:17:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:17:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:17:11 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:17:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+02:17:11 INFO  : Memory regions updated for context APU
+02:17:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:17:12 INFO  : 'con' command is executed.
+02:17:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+02:19:44 INFO  : Disconnected from the channel tcfchan#7.
+02:19:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+02:19:45 INFO  : 'fpga -state' command is executed.
+02:19:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:19:46 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:19:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:19:46 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+02:19:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:19:47 INFO  : 'stop' command is executed.
+02:19:48 INFO  : 'ps7_init' command is executed.
+02:19:48 INFO  : 'ps7_post_config' command is executed.
+02:19:48 INFO  : 'con' command is executed.
+02:19:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:19:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:19:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:19:49 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:19:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+02:19:49 INFO  : Memory regions updated for context APU
+02:19:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:19:50 INFO  : 'con' command is executed.
+02:19:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+02:20:33 INFO  : Disconnected from the channel tcfchan#8.
+02:20:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279759784A" && level==0} -index 1' command is executed.
+02:20:33 INFO  : 'fpga -state' command is executed.
+02:20:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:20:35 INFO  : Sourcing of 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:20:35 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:20:35 INFO  : Hardware design information is loaded from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf'.
+02:20:36 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0' command is executed.
+02:20:36 INFO  : 'stop' command is executed.
+02:20:36 INFO  : 'ps7_init' command is executed.
+02:20:36 INFO  : 'ps7_post_config' command is executed.
+02:20:37 INFO  : 'con' command is executed.
+02:20:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:20:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:20:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:20:38 INFO  : The application 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:20:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+loadhw C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+stop
+ps7_init
+ps7_post_config
+con
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+dow C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_SDK/Debug/DBT_SDK.elf
+----------------End of Script----------------
+
+02:20:38 INFO  : Memory regions updated for context APU
+02:20:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:20:38 INFO  : 'con' command is executed.
+02:20:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279759784A"} -index 0
+con
+----------------End of Script----------------
+
+02:22:11 INFO  : Disconnected from the channel tcfchan#9.
+02:22:55 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+02:39:03 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+02:39:10 INFO  : XSDB server has started successfully.
+02:39:12 INFO  : Processing command line option -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf.
+02:40:43 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

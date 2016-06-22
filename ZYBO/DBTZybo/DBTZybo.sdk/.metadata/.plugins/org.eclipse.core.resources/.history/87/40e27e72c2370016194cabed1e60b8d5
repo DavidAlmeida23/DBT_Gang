@@ -1,0 +1,55 @@
+#ifndef C8051_H
+#define C8051_H
+
+#include "SourceArchitecture.h"
+
+
+
+#define A 0xE0
+#define B 0xF0
+#define SP 0x81
+#define PSW 0xD0
+#define DPH 0x83
+#define DPL 0x82
+
+
+#define DATA_SIZE 256
+#define XDATA_SIZE  8192
+
+class C8051Arch: public CSourceArchitecture
+{
+
+
+public:
+        C8051Arch(int Ccache_size = 0, CTargetArchitecture *target = 0 );
+        ~C8051Arch();
+
+        virtual void envReset(void);
+	virtual void condCodedHandlerInit(void);
+	virtual void decode(uint8_t op);
+
+
+        void fineDecode_0x0(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x1(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x2(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x3(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x4(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x5(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x6(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x7(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x8(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x9(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xa(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xb(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xc(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xd(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xe(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xf(uint8_t subOP, uint8_t Rn);
+
+
+	int getMyAddr(void);
+
+
+};
+
+#endif

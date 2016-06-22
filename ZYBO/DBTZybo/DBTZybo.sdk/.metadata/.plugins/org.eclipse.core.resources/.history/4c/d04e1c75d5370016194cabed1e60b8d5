@@ -1,0 +1,36 @@
+/*
+ * Empty C++ Application
+ */
+
+#include "platform.h"
+#include "ps7_init.h"
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+
+
+void func(char x1, char x2, char x3, char x4){
+
+	char x = x1 + x2 + x3 + x4;
+
+}
+
+void helper(void (*i)(char, char, char, char)){
+
+
+}
+
+
+int main()
+{
+
+
+	  init_platform();
+
+	  ps7_post_config();
+
+	  func(1, 2, 3, 4);
+	  //helper(func);
+
+	return 0;
+}

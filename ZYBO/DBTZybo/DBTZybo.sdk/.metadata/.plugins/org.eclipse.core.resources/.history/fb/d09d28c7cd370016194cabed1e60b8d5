@@ -1,0 +1,101 @@
+#ifndef CORTEXM3_H
+#define CORTEXM3_H
+
+
+#include "TargetArchitecture.h"
+//#include "DBTEngine.h"
+#include "types.h"
+#include "SourceArch_8051.h"
+
+
+#define SAVE_EXEC_CONTEXT() 	gen_PUSH( LST_MEM_BASE | LST_tReg1 | LST_tReg2 | LST_tReg3 | LST_aReg1 | LST_aReg2 )
+#define RESTORE_EXEC_CONTEXT()	gen_POP( LST_MEM_BASE | LST_tReg1 | LST_tReg2 | LST_tReg3 | LST_aReg1 | LST_aReg2 )
+
+class CCortexM3: public CTargetArchitecture
+{
+
+ // lzEvParStruct lzParameters;  //ver onde por isto -- quem usa??
+
+
+public:
+  CCortexM3(int Tcache_size = 0);
+  ~CCortexM3();
+
+  virtual void gen_prolog(void);
+  virtual void gen_epilog(void);
+
+  virtual void gen_helper(void (CTargetArchitecture::*i)(void));
+
+  virtual void helper_ret(void);
+  virtual void helper_call(void);
+  virtual void helper_xmem_range(void);
+  virtual void helper_CC_lazyEv_SNIFFER_BACKDOOR(void);
+  virtual void helper_DA(void);
+  virtual void helper_debug(int soft_brkp_addr);
+
+  void gen_assemble_lazyEv_param(char operation, uint8_t Op1Reg, uint8_t Op2Reg, uint8_t caryReg);
+
+  virtual void gen_brkp( uint8_t imm) ;
+  virtual void gen_blx(uint8_t DReg) ;
+  virtual void gen_PUSH(uint16_t reg_lst) ;
+  virtual void gen_POP(uint16_t reg_lst) ;
+  virtual void gen_cmp(uint8_t SReg1, uint8_t SReg2) ;
+  virtual void gen_cmpi(uint8_t SReg, uint8_t imm) ;
+  virtual void gen_it(uint8_t firstcond, uint8_t mask) ;
+  virtual void gen_cje(uint8_t SReg1, uint8_t SReg2, uint8_t offset) ;
+  virtual void gen_cjne(uint8_t SReg1, uint8_t SReg2, uint8_t offset) ;
+  virtual void gen_cjei(uint8_t SReg, uint8_t imm, uint8_t offset);	//removed AReg
+  virtual void gen_cjnei(uint8_t SReg1,  uint8_t imm, uint8_t offset);	//removed AReg
+
+  virtual void gen_writePC(uint16_t npc) ;
+  virtual void gen_writePCreg(uint8_t SReg) ;
+
+  virtual void gen_mov(uint8_t DReg, uint8_t SReg) ;
+//	void gen_movi8(uint8_t DReg, uint8_t imm);
+//	void gen_movi16(uint8_t DReg, uint16_t imm);
+//	void gen_movi32(uint8_t DReg, uint32_t imm);
+  virtual void gen_movi(uint8_t DReg, uint32_t imm) ;
+
+  virtual void gen_ld8(uint8_t DReg, unsigned int imm) ;
+  virtual void gen_ld16(uint8_t DReg, unsigned int imm) ;
+  virtual void gen_ldi8(uint8_t DReg, uint8_t SReg1, uint8_t SReg2) ;
+
+  virtual void gen_st8(unsigned int imm, uint8_t SReg) ;
+  virtual void gen_st16(unsigned int imm, uint8_t SReg) ;
+  virtual void gen_sti8(uint8_t SReg, uint8_t DReg1, uint8_t DReg2) ;
+
+//	void gen_st8_imm_abs(unsigned int addr, uint8_t imm);
+//	void gen_st8_abs(unsigned int addr, uint8_t SReg);
+
+  virtual void gen_ld_bit(uint8_t SReg, uint8_t DReg, uint8_t bit_addr) ;
+  virtual void gen_st_bit(uint8_t SReg, uint8_t DReg, uint8_t bit_addr);
+
+  virtual void gen_add(uint8_t DReg, uint8_t SReg1, uint8_t SReg2);
+  virtual void gen_addi(uint8_t Reg, uint16_t imm) ;
+  virtual void gen_sub(uint8_t DReg, uint8_t SReg1, uint8_t SReg2) ;
+  virtual void gen_subi(uint8_t Reg, uint16_t imm) ;
+
+  virtual void gen_div(uint8_t DReg, uint8_t SReg1, uint8_t SReg2) ;
+  virtual void gen_mul(uint8_t DReg, uint8_t SReg);
+//void gen_rem(uint8_t DReg, uint8_t SReg1, uint8_t SReg2);
+
+  virtual void gen_not(uint8_t DReg, uint8_t SReg);
+  virtual void gen_or(uint8_t DReg, uint8_t SReg) ;
+  virtual void gen_ori(uint8_t DReg, uint8_t SReg, uint8_t imm);
+  virtual void gen_and(uint8_t DReg, uint8_t SReg);
+  virtual void gen_andi(uint8_t DReg, uint8_t SReg, uint8_t imm);
+  virtual void gen_xor(uint8_t DReg, uint8_t SReg) ;
+
+//	void gen_shr(uint8_t DReg, uint8_t SReg1, uint8_t SReg2);
+  virtual void gen_shri(uint8_t DReg, uint8_t SReg, uint8_t imm);
+//	void gen_shl(uint8_t DReg, uint8_t SReg1, uint8_t SReg2);
+  virtual void gen_shli(uint8_t DReg, uint8_t SReg, uint8_t imm) ;
+
+  virtual void gen_orShl(uint8_t SDReg, uint8_t SReg, int Byte);
+
+
+
+  int generate(void);
+};
+
+#endif
