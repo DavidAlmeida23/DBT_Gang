@@ -2,25 +2,42 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Wed Jun 22 02:36:29 2016
-# Process ID: 5680
+# Start of session at: Fri Jul 01 18:07:42 2016
+# Process ID: 4992
 # Current directory: C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3688 C:\Users\Public\GIT-DBT\DBT_Gang\ZYBO\DBTZybo\DBTZybo.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4764 C:\Users\Public\GIT-DBT\DBT_Gang\ZYBO\DBTZybo\DBTZybo.xpr
 # Log file: C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/vivado.log
 # Journal file: C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/Public/GIT-DBTGang/DBT_Gang/ZYBO/DBTZybo' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
-open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 781.906 ; gain = 205.895
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:44 . Memory (MB): peak = 794.387 ; gain = 195.547
+launch_sdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.runs/impl_1/DBT_BD_wrapper.sysdef C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
 launch_sdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 22 02:40:47 2016...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 01 18:18:18 2016...

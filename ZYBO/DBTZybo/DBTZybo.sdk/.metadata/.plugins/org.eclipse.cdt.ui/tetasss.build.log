@@ -1,6 +1,64 @@
-02:05:42 **** Incremental Build of configuration Debug for project tetasss ****
+02:09:56 **** Build of configuration Debug for project tetasss ****
 make all 
-make: Nada a ser feito para `all'.
+'Building file: ../src/main.cc'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../tetasss_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In member function 'void A::func(char, char, char, char)':
+../src/main.cc:23:8: warning: unused variable 'x' [-Wunused-variable]
+   char x = x1 + x2 + x3 + x4;
+        ^
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../tetasss_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/ps7_init.c'
+'Invoking: ARM g++ compiler'
+arm-xilinx-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ps7_init.o" -I../../tetasss_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "../src/ps7_init.c"
+../src/ps7_init.c: In function 'char* getPS7MessageInfo(unsigned int)':
+../src/ps7_init.c:12798:19: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   char* err_msg = "";
+                   ^
+../src/ps7_init.c:12800:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     case PS7_INIT_SUCCESS:                  err_msg = "PS7 initialization successful"; break;
+                                                     ^
+../src/ps7_init.c:12801:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     case PS7_INIT_CORRUPT:                  err_msg = "PS7 init Data Corrupted"; break;
+                                                     ^
+../src/ps7_init.c:12802:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     case PS7_INIT_TIMEOUT:                  err_msg = "PS7 init mask poll timeout"; break;
+                                                     ^
+../src/ps7_init.c:12803:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     case PS7_POLL_FAILED_DDR_INIT:          err_msg = "Mask Poll failed for DDR Init"; break;
+                                                     ^
+../src/ps7_init.c:12804:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     case PS7_POLL_FAILED_DMA:               err_msg = "Mask Poll failed for PLL Init"; break;
+                                                     ^
+../src/ps7_init.c:12805:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     case PS7_POLL_FAILED_PLL:               err_msg = "Mask Poll failed for DMA done bit"; break;
+                                                     ^
+../src/ps7_init.c:12806:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     default:                                err_msg = "Undefined error status"; break;
+                                                     ^
+../src/ps7_init.c: In function 'int ps7_config(long unsigned int*)':
+../src/ps7_init.c:12917:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             while ((*addr < delay)) {
+                           ^
+'Finished building: ../src/ps7_init.c'
+' '
+'Building target: tetasss.elf'
+'Invoking: ARM g++ linker'
+arm-xilinx-eabi-g++ -Wl,-T -Wl,../src/lscript.ld -L../../tetasss_bsp/ps7_cortexa9_0/lib -o "tetasss.elf"  ./src/main.o ./src/platform.o ./src/ps7_init.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: tetasss.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size tetasss.elf  |tee "tetasss.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36964	  13008	  22628	  72600	  11b98	tetasss.elf
+'Finished building: tetasss.elf.size'
+' '
 
-02:05:43 Build Finished (took 140ms)
+02:09:57 Build Finished (took 1s.289ms)
 

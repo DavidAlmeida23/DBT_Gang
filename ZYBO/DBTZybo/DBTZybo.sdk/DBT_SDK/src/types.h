@@ -53,8 +53,8 @@
 	#define zprintf(...)		//used for debug purposees. if no debug capabilities are desired, uncoment this line and
 	#define vzprintf(...)		//verbose debug purposees. if no debug capabilities are desired, uncoment this line and
 #else
-	#define zprintf printf		//comment this one instead
-	#define vzprintf printf		//comment this one instead
+	#define zprintf printf	//comment this one instead
+	#define vzprintf printf	//comment this one instead
 	//#define vzprintf(...)
 
 	//if defined will execute some code not necessary to execution

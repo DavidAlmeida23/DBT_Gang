@@ -2,29 +2,35 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="gen_assemble_lazyEv_param" key="selection"/>
+		<item value="::gen_movi" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="gen_assemble_lazyEv_param"/>
-			<item value="push"/>
-			<item value="gen_helper"/>
-			<item value="func"/>
-			<item value="add a"/>
-			<item value="add"/>
-			<item value="mov a"/>
-			<item value="move a"/>
+			<item value="::gen_movi"/>
+			<item value="void gen_movi"/>
+			<item value="gen_movi("/>
+			<item value="gen_movi"/>
+			<item value="movi"/>
+			<item value="0x94"/>
+			<item value="94"/>
+			<item value="SUBB"/>
 		</list>
 		<list key="replacehistory">
+			<item value="gen_helper(  &amp;CTargetArchitecture::CC_onDemand_Update, LZE_SUBB_OP, tReg1, tReg2, tReg3 )"/>
+			<item value="gen_helper(  &amp;CTargetArchitecture::CC_onDemand_Update, LZE_ADDC_OP, tReg1, tReg2, tReg3 )"/>
+			<item value="gen_helper(  &amp;CTargetArchitecture::CC_onDemand_Update, LZE_ADD_OP, tReg1, tReg2, 0x00 )"/>
+			<item value="target-&gt;eoExec"/>
+			<item value="eoBB"/>
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="640" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-		<item value="401" key="DIALOG_HEIGHT"/>
-		<item value="1026" key="DIALOG_X_ORIGIN"/>
-		<item value="300" key="DIALOG_Y_ORIGIN"/>
+		<item value="760" key="DIALOG_HEIGHT"/>
+		<item value="648" key="DIALOG_X_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

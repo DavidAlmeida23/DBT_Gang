@@ -105,6 +105,10 @@ int CDBTEngine::runDBT(void)	//method which is responsible for dispatching the j
 		zprintf("exec...\n currBB: %x \n", source.currBBExecPtr );
 		//SWITCH TO EXECUTION
 
+
+		//target.CC_onDemand_Update('1',2, 3, 0);
+
+
 		((void (*)(int*))((int*)(source.currBBExecPtr+1)))( (int *)(source.env.dataMem) );
 
 		//translation_cycles++;
@@ -131,9 +135,10 @@ uint8_t * CDBTEngine::translate(void)
 	  	//zprintf("  # 0x%x <=> 0x%x\n", env.PC, transCache.getCurrInsAddr());
 
 //		op = FETCH;
-		op = *(source.codeCache.baseBufferAddr + (source.env.PC++))	;
+		//op = *(source.codeCache.baseBufferAddr + (source.env.PC++))	;
 
-		source.decode((unsigned int)op);
+		source.decode();
+
 
 		//sInstCount++;
 //		if ( eoExec == true )	//decodes and generates the code

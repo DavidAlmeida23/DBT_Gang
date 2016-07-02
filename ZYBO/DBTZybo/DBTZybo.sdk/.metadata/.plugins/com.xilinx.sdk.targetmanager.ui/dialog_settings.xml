@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="false" key="DBT_BD_wrapper_hw_platform_0-partial_bit"/>
+	<item value="Local" key="DBT_BD_wrapper_hw_platform_0-target"/>
+	<item value="DBT_BD_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="DBT_BD_wrapper.bit" key="DBT_BD_wrapper_hw_platform_0-bitFile"/>
+	<item value="Auto Detect" key="DBT_BD_wrapper_hw_platform_0-device"/>
+	<item value="DBT_BD_wrapper.mmi" key="DBT_BD_wrapper_hw_platform_0-bmmFile"/>
+</section>

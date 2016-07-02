@@ -276,18 +276,25 @@ int main(void)
 //  #pragma section = "S_CODE_SEC"
 //  int s_code_size = __section_size("S_CODE_SEC");
 
-  static uint8_t srcCode[10] = {0x74, 1, 0x24, 1, 0x80, 0xFE};
+  static uint8_t srcCode[13] = {0X94, 5, 0x75, 0x82, 0xb1, 0x75, 0x83, 0x1a, 0x74, 0x20, 0x12, 0x20,
+		  	  	  	  	  	  	  	  	  0x68};
+
+
 
 
   int s_code_size = S_CODE_SIZE;
   SOURCE_MEM_BASE* s_code_base = (SOURCE_MEM_BASE*)S_CODE_LOCATION;
 
-  teste.initTranslator((void *)srcCode,10 ,(int) (srcCode + 10));
+  teste.initTranslator((void *)srcCode,13 ,(int) (srcCode + 10));
+  teste.runDBT();
+
 
 
   globalTeste = &teste;
 
   printf("Starting runDBT now...\n");
+
+  printf("Measurement about to start...\n");
 
 
 #ifdef MEASURE /*

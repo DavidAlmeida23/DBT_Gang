@@ -1,0 +1,119 @@
+/*
+
+Vivado v2015.4 (64-bit)
+SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+Process ID: 2500
+
+Current time: 	6/29/16 12:16:22 AM BST
+Time zone: 	Greenwich Mean Time (Europe/London)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1280x800
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_45 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.4/tps/win64/jre
+
+User name: 	Paulo
+User home directory: C:/Users/Paulo Felix
+User working directory: C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/Paulo Felix/AppData/Roaming/Xilinx/Vivado/2015.4/vivado.ini
+Vivado layouts directory: C:/Users/Paulo Felix/AppData/Roaming/Xilinx/Vivado/2015.4/layouts
+
+GUI allocated memory:	220 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 376 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bF:g (cq:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Public\GIT-DBT\DBT_Gang\ZYBO\DBTZybo\DBTZybo.xpr. Version: Vivado v2015.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.xpr 
+// [GUI Memory]: 32 MB (+31150kb) [00:00:08]
+// [Engine Memory]: 360 MB (+226494kb) [00:00:08]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 385 MB. GUI used memory: 24 MB. Current time: 6/29/16 12:16:24 AM BST
+// [Engine Memory]: 391 MB (+12868kb) [00:00:13]
+// [Engine Memory]: 413 MB (+2697kb) [00:00:18]
+// HMemoryUtils.trashcanNow. Engine heap size: 436 MB. GUI used memory: 24 MB. Current time: 6/29/16 12:16:39 AM BST
+// [Engine Memory]: 436 MB (+2847kb) [00:00:28]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 486 MB (+29232kb) [00:00:43]
+// [GUI Memory]: 51 MB (+17649kb) [00:00:46]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 504 MB. GUI used memory: 34 MB. Current time: 6/29/16 12:17:01 AM BST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 512 MB (+1869kb) [00:00:49]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 55 MB (+1507kb) [00:00:50]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: DBTZybo; location: C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo; part: xc7z010clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:43 . Memory (MB): peak = 795.094 ; gain = 233.348 
+dismissDialog("Open Project"); // bF:g (cq:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+// [GUI Memory]: 59 MB (+2063kb) [00:00:55]
+// [Engine Memory]: 541 MB (+3724kb) [00:00:55]
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // aa:JMenu (JPopupMenu:JComponent, cq:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ae:JMenuItem (JPopupMenu:JComponent, cq:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cq:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// Q:x (cq:JFrame): Launch SDK: addNotify
+// [GUI Memory]: 64 MB (+2122kb) [00:01:06]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:x)
+// [GUI Memory]: 69 MB (+1558kb) [00:01:08]
+dismissDialog("Launch SDK"); // Q:x (cq:JFrame)
+// Tcl Message: launch_sdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// HMemoryUtils.trashcanNow. Engine heap size: 541 MB. GUI used memory: 34 MB. Current time: 6/29/16 12:47:16 AM BST
+// HMemoryUtils.trashcanNow. Engine heap size: 541 MB. GUI used memory: 33 MB. Current time: 6/29/16 1:17:05 AM BST
+// HMemoryUtils.trashcanNow. Engine heap size: 541 MB. GUI used memory: 32 MB. Current time: 6/29/16 2:01:04 AM BST
+// Elapsed time: 6408 seconds
+closeMainWindow("DBTZybo - [C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.xpr] - Vivado 2015.4"); // cq:JFrame
+// G:aY (cq:JFrame): Exit Vivado: addNotify

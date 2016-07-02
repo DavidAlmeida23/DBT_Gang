@@ -64,25 +64,10 @@ public:
 
 	virtual void condCodedHandlerInit(void) = 0;
 
-	virtual void decode(uint8_t op) = 0;	//method used to decompose a fetched instruction into a set of micro Ops.
+	virtual void decode() = 0;	//method used to decompose a fetched instruction into a set of micro Ops.
 
 
-        virtual void fineDecode_0x0(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0x1(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0x2(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0x3(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0x4(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0x5(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0x6(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0x7(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0x8(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0x9(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0xa(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0xb(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0xc(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0xd(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0xe(uint8_t subOP, uint8_t Rn) = 0;
-        virtual void fineDecode_0xf(uint8_t subOP, uint8_t Rn) = 0;
+
 
 };
 

@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Jun 27 03:36:28 2016
+# Process ID: 4500
+# Current directory: C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4244 C:\Users\Public\GIT-DBT\DBT_Gang\ZYBO\DBTZybo\DBTZybo.xpr
+# Log file: C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/vivado.log
+# Journal file: C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:47 . Memory (MB): peak = 827.402 ; gain = 217.215
+launch_sdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk -hwspec C:/Users/Public/GIT-DBT/DBT_Gang/ZYBO/DBTZybo/DBTZybo.sdk/DBT_BD_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 27 05:47:26 2016...

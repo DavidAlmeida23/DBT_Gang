@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Memory/>
+<Memory>
+<Block Addr="0x00158148" Context="JTAG-jsn-Zybo-210279759784A-4ba00477-0.0" Size="-1"/>
+</Memory>

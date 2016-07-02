@@ -1,6 +1,6 @@
-02:40:24 **** Incremental Build of configuration Debug for project DBT_SDK ****
+01:09:39 **** Incremental Build of configuration Debug for project DBT_SDK ****
 make all 
 make: Nada a ser feito para `all'.
 
-02:40:25 Build Finished (took 219ms)
+01:09:39 Build Finished (took 140ms)
 

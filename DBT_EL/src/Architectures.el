@@ -10,3 +10,4 @@ component Architecture (C)
 		i_MemSizes s_MemSizes
 		i_Registers s_Registers
 }
+ 

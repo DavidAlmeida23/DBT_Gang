@@ -141,7 +141,10 @@ public:
   virtual void gen_epilog(void) = 0;
 
   virtual void gen_helper(void (CTargetArchitecture::*i)(void)) = 0;
-  virtual void gen_helper(void (CTargetArchitecture::*i)(uint8_t, uint8_t, uint8_t, uint8_t), uint8_t op, uint8_t op1, uint8_t op2, uint8_t car) = 0;
+
+  virtual void CC_onDemand_Update(uint8_t op, uint8_t r1, uint8_t r2, uint8_t car) = 0;
+
+
   //virtual void gen_helper(void (CDBTEngine::*i)(int), int arg1) = 0;
   //virtual void gen_helper_pcArg(void (CDBTEngine::*i)(int)) = 0;
   //virtual void gen_helper_r4(void (CDBTEngine::*i)(int,int)) = 0;
@@ -152,6 +155,7 @@ public:
   virtual void helper_CC_lazyEv_SNIFFER_BACKDOOR(void) = 0;
   virtual void helper_DA(void) = 0;
   virtual void helper_debug(int soft_brkp_addr) = 0;
+  virtual void gen_helper(void (CTargetArchitecture::*i)(uint8_t, uint8_t, uint8_t, uint8_t), uint8_t op, uint8_t op1, uint8_t op2, uint8_t car) = 0;
 
   virtual void gen_assemble_lazyEv_param(char operation, uint8_t Op1Reg, uint8_t Op2Reg, uint8_t caryReg) = 0;
 
@@ -213,7 +217,7 @@ public:
 
   virtual void gen_orShl(uint8_t SDReg, uint8_t SReg, int Byte) = 0;
 
-  virtual void CC_onDemand_Update(uint8_t op, uint8_t r1, uint8_t r2, uint8_t car) = 0;
+
 
 };
 

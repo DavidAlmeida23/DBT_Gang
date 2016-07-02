@@ -1,6 +1,15 @@
 #include "TargetArch_CortexM3.h"
 
 
+typedef struct CCparameters {
+	uint8_t op;
+	uint8_t op1;
+	uint8_t op2;
+	uint8_t car;
+};
+
+CCparameters cc;
+
 CCortexM3::CCortexM3(int Tcache_size)
     :CTargetArchitecture(Tcache_size)
     {
@@ -49,27 +58,46 @@ void CCortexM3::gen_helper(void (CTargetArchitecture::*i)(void)){
 	//SAVE_EXEC_CONTEXT();
 
 	gen_movi(0, (int)this);
-	gen_movi(1, *(int*)&i);
+	gen_movi(1, *(int*)((*(int*)(void*)(this)) + (*(int*)(void*)&i)));
 	gen_blx(1);
 
 	//RESTORE_EXEC_CONTEXT();
-
-	vzprintf("helper() call @0x%x\n", *(int*)&i);
+	vzprintf("helper() call1 @0x%p\n", (void*)(this->*i));
+	vzprintf("helper() call2 @0x%x\n", *(int*)((*(int*)(void*)(this)) + (*(int*)(void*)&i)));
 
 }
 
+//void gen_helper(void (CCortexM3::*i)(uint8_t, uint8_t, uint8_t, uint8_t), uint8_t op, uint8_t op1, uint8_t op2, uint8_t car);
+//void CC_onDemand_Update(uint8_t op, uint8_t r1, uint8_t r2, uint8_t car);
+
 void CCortexM3::gen_helper(void (CTargetArchitecture::*i)(uint8_t, uint8_t, uint8_t, uint8_t), uint8_t op, uint8_t op1, uint8_t op2, uint8_t car ){
 
-	gen_PUSH(car);
-	gen_movi(0, (int)this);
-	gen_movi(1, (int)op);
-	gen_movi(2, (int)op1);
-	gen_movi(3, (int)op2);
+	//this->*i
 
-	gen_movi(aReg1, *(int*)&i);
+	//void (A::*mfp)() = &A::func;
+
+	printf("address: %d", (void*)(this->*i));
+	printf("content: %d", *(int*)((*(int*)(void*)(this)) + (*(int*)(void*)&i)));
+	printf("content: %p", *(int*)((*(int*)(void*)(this)) + (*(int*)(void*)&i)));
+	//gen_movi(0, (int)this);
+
+
+//	gen_movi(4, (int)this);
+//	gen_ld8(4, *(int*)&i);
+
+
+	gen_movi(0, (int)this);
+	gen_mov(1, (int)op);
+	gen_mov(2, (int)op1);
+	gen_mov(3, (int)op2);
+	gen_PUSH((1<<(int)car));
+
+	gen_movi(aReg1, *(int*)((*(int*)(void*)(this)) + (*(int*)(void*)&i)));
+	//gen_ld16(4, *(int*)((*(int*)(void*)(this)) + (*(int*)(void*)&i)));
 	gen_blx(aReg1);
 
-	vzprintf("helper() call @0x%x\n", *(int*)&i);
+
+	vzprintf("helper() CC @0x%x\n", *(int*)&i);
 }
 
 void CCortexM3::CC_onDemand_Update(uint8_t op, uint8_t r1, uint8_t r2, uint8_t car){
@@ -78,7 +106,8 @@ void CCortexM3::CC_onDemand_Update(uint8_t op, uint8_t r1, uint8_t r2, uint8_t c
 	////it will read the Condition Codes lazy evaluation register (R12) and:
 	//// if operation field is 0
 	////	-CC are updated, except Parity
-	////	-calculae only P
+	////	-calculae only P33116
+	MOVT R0
 	////else
 	////	-pending condition code update
 	////  	-calculate all the Cond Codes

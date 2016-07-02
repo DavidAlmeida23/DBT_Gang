@@ -4,7 +4,7 @@ import "Interfaces.el"
 component TranslationCache(C)
 {
 	properties:
-		int TCache_Size
+		int TCache_Size 
 		int numberOfTradutions
 	services:
 		i_TCache s_TCache

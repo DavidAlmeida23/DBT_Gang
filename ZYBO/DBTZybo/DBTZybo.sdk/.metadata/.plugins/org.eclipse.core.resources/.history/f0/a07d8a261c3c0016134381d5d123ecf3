@@ -1,0 +1,209 @@
+#ifndef C8051_H
+#define C8051_H
+
+#include "SourceArchitecture.h"
+
+#define NUM_Instructions	256
+class C8051Arch;
+typedef void* arg_P;
+typedef void (C8051Arch::*method_P)(arg_P*);
+
+
+#define A 0xE0
+#define B 0xF0
+#define SP 0x81
+#define PSW 0xD0
+#define DPH 0x83
+#define DPL 0x82
+
+
+#define DATA_SIZE 256
+#define XDATA_SIZE  8192
+
+
+struct InstructionDecodeSteps {
+	arg_P **auxVar;
+	method_P* steps;
+	int numSteps;
+
+	InstructionDecodeSteps(int numSteps, int numMaxArgs);
+};
+
+
+
+
+class C8051Arch: public CSourceArchitecture
+{
+
+	InstructionDecodeSteps** JmpTable;
+public:
+        C8051Arch(int Ccache_size = 0, CTargetArchitecture *target = 0 );
+        ~C8051Arch();
+
+
+
+    virtual void envReset(void);
+	virtual void condCodedHandlerInit(void);
+	//virtual void decode(uint8_t op);
+	virtual void decode();
+
+	void initJumpTable();
+
+	void fetch(arg_P * ptr);
+	void set_eoBB(arg_P * ptr);
+	void set_eoExec(arg_P * ptr);
+	void AuxFunc_NewPCx(arg_P * ptr);
+	void AuxFunc_2bytes(arg_P * ptr);
+	void AuxFunc_Ri(arg_P * ptr);
+	void AuxFunc_Rn(arg_P * ptr);
+	void AuxFunc_ByteAddrAssign(arg_P * ptr);
+	void AuxFunc1_0x80(arg_P * ptr);
+
+
+	void gen_helper_wrapper1(arg_P * ptr);  //CALL
+	void gen_helper_wrapper2(arg_P * ptr);  //RET
+	void gen_helper_wrapper3(arg_P * ptr);  //DA
+	void gen_helper_pcArg_wrapper(arg_P * ptr);
+	void gen_helper_r4_wrapper(arg_P * ptr);
+	void gen_brkp_wrapper(arg_P * ptr);
+	void gen_blx_wrapper(arg_P * ptr);
+	void gen_PUSH_wrapper(arg_P * ptr);
+	void gen_POP_wrapper(arg_P * ptr);
+	void gen_cmp_wrapper(arg_P * ptr);
+	void gen_cmpi_wrapper(arg_P * ptr);
+	void gen_it_wrapper(arg_P * ptr);
+	void gen_cje_wrapper(arg_P * ptr);
+	void gen_cjne_wrapper(arg_P * ptr);
+	void gen_cjei_wrapper(arg_P * ptr);
+	void gen_cjnei_wrapper(arg_P * ptr);
+	void gen_writePC_wrapper(arg_P * ptr);
+	void gen_writePCreg_wrapper(arg_P * ptr);
+	void gen_mov_wrapper(arg_P * ptr);
+	//void gen_movi8(uint8_t DReg, uint8_t imm);
+	//void gen_movi16(uint8_t DReg, uint16_t imm);
+	//void gen_movi32(uint8_t DReg, uint32_t imm);
+	void gen_movi_wrapper(arg_P * ptr);
+	void gen_ld8_wrapper(arg_P * ptr);
+	void gen_ld16_wrapper(arg_P * ptr);
+	void gen_ldi8_wrapper(arg_P * ptr);
+	void gen_st8_wrapper(arg_P * ptr);
+	void gen_st16_wrapper(arg_P * ptr);
+	void gen_sti8_wrapper(arg_P * ptr);
+	//void gen_st8_imm_abs(unsigned int addr, uint8_t imm);
+	//void gen_st8_abs(unsigned int addr, uint8_t SReg);
+	void gen_ld_bit_wrapper(arg_P * ptr);
+	void gen_st_bit_wrapper(arg_P * ptr);
+	void gen_add_wrapper(arg_P * ptr);
+	void gen_addi_wrapper(arg_P * ptr);
+	void gen_sub_wrapper(arg_P * ptr);
+	void gen_subi_wrapper(arg_P * ptr);
+	void gen_div_wrapper(arg_P * ptr);
+	void gen_mul_wrapper(arg_P * ptr);
+	//void gen_rem(uint8_t DReg, uint8_t SReg1, uint8_t SReg2);
+	void gen_not_wrapper(arg_P * ptr);
+	void gen_or_wrapper(arg_P * ptr);
+	void gen_ori_wrapper(arg_P * ptr);
+	void gen_and_wrapper(arg_P * ptr);
+	void gen_andi_wrapper(arg_P * ptr);
+	void gen_xor_wrapper(arg_P * ptr);
+	//void gen_shr(uint8_t DReg, uint8_t SReg1, uint8_t SReg2);
+	void gen_shri_wrapper(arg_P * ptr);
+	//void gen_shl(uint8_t DReg, uint8_t SReg1, uint8_t SReg2);
+	void gen_shli_wrapper(arg_P * ptr);
+	void gen_orShl_wrapper(arg_P * ptr);
+	void helper_ret_wrapper(arg_P * ptr);
+	void helper_call_wrapper(arg_P * ptr);
+	void helper_xmem_range_wrapper(arg_P * ptr);
+	//void gen_assemble_lazyEv_reg(int operation, uint8_t Op1, uint8_t Op2, uint8_t cary);
+	void gen_assemble_lazyEv_param_wrapper(arg_P * ptr);
+	void helper_CC_lazyEv_wrapper(arg_P * ptr);
+	void helper_DA_wrapper(arg_P * ptr);
+	void helper_exception_wrapper(arg_P * ptr);
+	void helper_debug_wrapper(arg_P * ptr);
+	void helper_r4_wrapper(arg_P * ptr);
+
+
+
+
+	void print_NOP(arg_P * ptr);               void print_AJMP(arg_P * ptr);
+	void print_LJMP(arg_P * ptr);              void print_RR_A(arg_P * ptr);
+	void print_INC_A(arg_P * ptr);             void print_INC_DIRECT(arg_P * ptr);
+	void print_INC_Ri(arg_P * ptr);            void print_INC_Rn(arg_P * ptr);
+	void print_JBC(arg_P * ptr);               void print_ACALL(arg_P * ptr);
+	void print_LCALL(arg_P * ptr);             void print_RRC(arg_P * ptr);
+	void print_DEC_A(arg_P * ptr);             void print_DEC_DIRECT(arg_P * ptr);
+	void print_DEC_Ri(arg_P * ptr);            void print_DEC_Rn(arg_P * ptr);
+	void print_JB(arg_P * ptr);                void print_RET(arg_P * ptr);
+	void print_RL(arg_P * ptr);                void print_ADD_A_IMM(arg_P * ptr);
+	void print_ADD_A_DIRECT(arg_P * ptr);      void print_ADD_A_Ri(arg_P * ptr);
+	void print_ADD_A_Rn(arg_P * ptr);          void print_JNB(arg_P * ptr);
+	void print_RLC_A(arg_P * ptr);             void print_ADDC_A_IMM(arg_P * ptr);
+	void print_ADDC_A_DIRECT(arg_P * ptr);     void print_ADDC_A_Ri(arg_P * ptr);
+	void print_ADDC_A_Rn(arg_P * ptr);         void print_JC(arg_P * ptr);
+	void print_ORL_DIRECT_A(arg_P * ptr);      void print_ORL_DIRECT_IMM(arg_P * ptr);
+	void print_ORL_A_IMM(arg_P * ptr);         void print_ORL_A_DIRECT(arg_P * ptr);
+	void print_ORL_A_Ri(arg_P * ptr);          void print_ORL_A_Rn(arg_P * ptr);
+	void print_JNC(arg_P * ptr);               void print_ANL_DIRECT_A(arg_P * ptr);
+	void print_ANL_DIRECT_IMM(arg_P * ptr);    void print_ANL_A_IMM(arg_P * ptr);
+	void print_ANL_A_DIRECT(arg_P * ptr);      void print_ANL_A_Ri(arg_P * ptr);
+	void print_ANL_A_Rn(arg_P * ptr);          void print_JZ(arg_P * ptr);
+	void print_XRL_DIRECT_A(arg_P * ptr);      void print_XRL_DIRECT_IMM(arg_P * ptr);
+	void print_XRL_A_IMM(arg_P * ptr);         void print_XRL_A_DIRECT(arg_P * ptr);
+	void print_XRL_A_Ri(arg_P * ptr);          void print_XRL_A_Rn(arg_P * ptr);
+	void print_JNZ(arg_P * ptr);               void print_ORL_C_BIT(arg_P * ptr);
+	void print_JMP_A_DPTR(arg_P * ptr);        void print_MOV_A_IMM(arg_P * ptr);
+	void print_MOV_DIRECT_IMM(arg_P * ptr);    void print_MOV_Ri_IMM(arg_P * ptr);
+	void print_MOV_Rn_IMM(arg_P * ptr);        void print_SJMP(arg_P * ptr);
+	void print_ANL_C_BIT(arg_P * ptr);         void print_MOV_A_PC(arg_P * ptr);
+	void print_DIV_A_B(arg_P * ptr);           void print_MOV_DIRECT_DIRECT(arg_P * ptr);
+	void print_MOV_DIRECT_Ri(arg_P * ptr);     void print_MOV_DIRECT_Rn(arg_P * ptr);
+	void print_MOV_DPTR_IMM(arg_P * ptr);      void print_MOV_BIT_C(arg_P * ptr);
+	void print_MOVC_A_DPTR(arg_P * ptr);       void print_SUBB_A_IMM(arg_P * ptr);
+	void print_SUBB_A_DIRECT(arg_P * ptr);     void print_SUBB_A_Ri(arg_P * ptr);
+	void print_ORL_C_negBIT(arg_P * ptr);      void print_MOV_C_BIT(arg_P * ptr);
+	void print_INC_DPTR(arg_P * ptr);          void print_MUL_A_B(arg_P * ptr);
+	void print_UNDEFINED(arg_P * ptr);         void print_MOV_Rn_DIRECT(arg_P * ptr);
+	void print_ANL_C_negBIT(arg_P * ptr);      void print_CPL_BIT(arg_P * ptr);
+	void print_CPL_C(arg_P * ptr);             void print_CJNE_A_IMM(arg_P * ptr);
+	void print_CJNE_A_DIRECT(arg_P * ptr);     void print_CJNE_Ri_IMM(arg_P * ptr);
+	void print_CJNE_Rn_IMM(arg_P * ptr);       void print_CLR_BIT(arg_P * ptr);
+	void print_CLR_C(arg_P * ptr);             void print_SWAP_A(arg_P * ptr);
+	void print_XCH_A_DIRECT(arg_P * ptr);      void print_XCH_A_Ri(arg_P * ptr);
+	void print_POP(arg_P * ptr);               void print_SETB_BIT(arg_P * ptr);
+	void print_SETB_C(arg_P * ptr);            void print_DA(arg_P * ptr);
+	void print_DJNZ_DIRECT_OFFSET(arg_P * ptr);void print_XCHD_A_Ri(arg_P * ptr);
+	void print_DJNZ_Rn_OFFSET(arg_P * ptr);    void print_MOVX_A_DPTR(arg_P * ptr);
+	void print_MOVX_A_Ri(arg_P * ptr);         void print_CLR_A(arg_P * ptr);
+	void print_MOV_A_DIRECT(arg_P * ptr);      void print_MOV_A_Ri(arg_P * ptr);
+	void print_MOV_A_Rn(arg_P * ptr);          void print_MOVX_DPTR_A(arg_P * ptr);
+	void print_MOVX_Ri_A(arg_P * ptr);         void print_MOV_DIRECT_A(arg_P * ptr);
+	void print_MOV_Ri_A(arg_P * ptr);          void print_MOV_Rn_A(arg_P * ptr);
+	void print_RETI(arg_P * ptr);              void print_SUBB_A_Rn(arg_P * ptr);
+	void print_MOV_Ri_DIRECT(arg_P * ptr);     void print_PUSH(arg_P * ptr);
+	void print_XCH_A_Rn(arg_P * ptr);          void print_CPL_A(arg_P * ptr);
+	/*
+    void fineDecode_0x0(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x1(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x2(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x3(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x4(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x5(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x6(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x7(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x8(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0x9(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xa(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xb(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xc(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xd(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xe(uint8_t subOP, uint8_t Rn);
+	void fineDecode_0xf(uint8_t subOP, uint8_t Rn);
+	*/
+
+
+	int getMyAddr(void);
+
+
+};
+
+#endif
